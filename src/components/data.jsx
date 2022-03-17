@@ -1,0 +1,18 @@
+export const data = [
+    {'id': 1, 'username': 'Mike', 'registration_date': '2020-03-21','rating': 24, 'email': 'Mike@mail.ry'},
+    {'id': 2, 'username': 'Robert', 'registration_date': '2019-04-04','rating': 99, 'email': 'Robert@mail.ry'},
+    {'id': 3, 'username': 'James', 'registration_date': '2021-05-03','rating': 32, 'email': 'James@mail.ry'},
+    {'id': 4, 'username': 'Michael', 'registration_date': '2018-05-19','rating': 14, 'email': 'Michael@mail.ry'},
+    {'id': 5, 'username': 'William', 'registration_date': '2018-05-27','rating': 23, 'email': 'William@mail.ry'},
+    {'id': 6, 'username': 'Mary', 'registration_date': '2018-07-08','rating': 2, 'email': 'Mary@mail.ry'},
+    {'id': 7, 'username': 'Patricia', 'registration_date': '2020-07-12','rating': 4, 'email': 'Patricia@mail.ry'},
+    {'id': 8, 'username': 'Jennifer', 'registration_date': '2021-07-15','rating': 5, 'email': 'Jennifer@mail.ry'},
+    {'id': 9, 'username': 'Linda', 'registration_date': '2021-07-20','rating': 92, 'email': 'Linda@mail.ry'},
+    {'id': 10, 'username': 'Elizabeth', 'registration_date': '2020-08-09','rating': 41, 'email': 'Elizabeth@mail.ry'},
+    {'id': 11, 'username': 'David', 'registration_date': '2019-09-20','rating': 52, 'email': 'David@mail.ry'},
+    {'id': 12, 'username': 'Richard', 'registration_date': '2019-09-22','rating': 22, 'email': 'Richard@mail.ry'},
+    {'id': 13, 'username': 'Joseph', 'registration_date': '2020-10-05','rating': 21, 'email': 'Joseph@mail.ry'},
+    {'id': 14, 'username': 'Sarah', 'registration_date': '2021-10-12','rating': 1, 'email': 'Sarah@mail.ry'},
+    {'id': 15, 'username': 'Karen', 'registration_date': '2020-11-07','rating': 3, 'email': 'Karen@mail.ry'},
+    {'id': 16, 'username': 'Christopher', 'registration_date': '2021-12-22','rating': 6, 'email': 'Christopher@mail.ry'},
+]

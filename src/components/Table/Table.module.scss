@@ -1,0 +1,99 @@
+.sort{
+    position: relative;
+    width: 100%;
+    height: 14px;
+    padding: 0% 2.7%;
+    margin-top: 85px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 140%;
+
+    color: #9EAAB4;
+    &__button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 14px;
+        color: #9EAAB4;
+        border-bottom: 1px dashed #9EAAB4;
+        padding: 0;
+        margin-left: 9px;
+        &:hover{
+            color: #333333;
+            border-bottom: 1px dashed #333333;
+        }
+        &_active{
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 14px;
+            color: #333333;
+            border-bottom: 1px dashed #333333;
+            padding: 0;
+            margin-left: 9px;
+        }
+    }
+    &__table{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 16px 16px;
+        margin: 0% 2.7%;
+        margin-top: 18px;
+        background-color: #FFFFFF;
+    }
+    &__row{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        &_box{    
+            position: relative;
+            flex: 1;
+            border-bottom: 1px solid #F7F7F7;
+            display: flex;
+        }
+        &_username{
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 16px;
+            color: #0CB4F1;
+        }
+        &_text{
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 17px;
+            color: #9EAAB4;
+        }
+        &_example{
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 17px;
+            color: #9EAAB4;
+        }
+        &_icon{
+            position: absolute;
+            display: flex;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 18px;
+            cursor: pointer;
+        }
+    }
+}

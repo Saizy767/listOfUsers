@@ -1,0 +1,32 @@
+.header{
+    position: relative;
+    display: block;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    padding: 0% 2.7%;
+    top: 1.9%;
+    color: #333333;
+    &_text{
+        position: absolute;
+        width: 27.9%;
+        height: 4.3%;
+        }
+}
+.pagination{
+    position: relative;
+    padding: 0% 2.7%;
+    margin-top: 20px;
+    &__page{
+        position: relative;
+        border: none;
+        background-color: #ECEFF0;
+        border-radius: 2px;
+        width: 40px;
+        height: 40px;
+        margin-right: 0.5%;
+        cursor: pointer;
+    }
+}
