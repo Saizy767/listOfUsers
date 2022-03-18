@@ -1,4 +1,4 @@
-import React, { useReducer, /*useState ,*/ useEffect} from "react";
+import React, { useReducer, useState , useEffect} from "react";
 import styles from './App.module.scss'
 import Input from './components/Input/Input.jsx'
 import Table from "./components/Table/Table.jsx";
@@ -8,15 +8,16 @@ import {initialStateRating, reducerRating} from "./components/Reducers/RatingRed
 import {initialStateReg, reducerReg} from "./components/Reducers/DataRegistrationReducer.jsx"
 import {initialStateAlert, reducerAlert} from "./components/Reducers/AlertReducer.jsx"
 import {initialStateDelete, reducerDelete} from "./components/Reducers/DeleteReducer";
-import { initialStateStart, reducerStart } from "./components/Reducers/StartReducer";
-import { initialStateEnd, reducerEnd } from "./components/Reducers/EndReducer";
+import {initialStateStart, reducerStart } from "./components/Reducers/StartReducer";
+import {initialStateEnd, reducerEnd } from "./components/Reducers/EndReducer";
 import {initialStatePage, reducerPage} from './components/Reducers/PageReducer'
 import Alert from "./components/Alert/Alert";
-import { data } from "./components/data";
+//import { data } from "./components/data";
 
 
 const App = () => {
-  //const [isUser, setIsUser] = useState([])
+  const [isUser, setIsUser] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
   const [isClean, setIsClean] = useReducer(reducer, initialState)
   const [isResult, setIsResult] = useReducer(reducerResult, initialStateResult)
   const [isRating, setIsRating] = useReducer(reducerRating, initialStateRating)
@@ -28,17 +29,18 @@ const App = () => {
   const [isPage, setIsPage] = useReducer(reducerPage, initialStatePage)
 
   let counter = Math.ceil(isResult.condition.length / 5)
-/*
+
   const fetchUsers = async () =>{
     const temp = await fetch('https://5ebbb8e5f2cfeb001697d05c.mockapi.io/users')
         .then((res)=>res.json())
     setIsUser(temp)
-    setIsResult({type:'setResult', array: data})
-}
-*/
+    setIsResult({type:'setResult', array: temp})
+    setIsLoading(false)
+  }
+
   useEffect(()=>{
-      //fetchUsers()
-      setIsResult({type:'setResult', array: data})
+      fetchUsers()
+      //setIsResult({type:'setResult', array: data})
   },[])
 
   useEffect(()=>{
@@ -59,12 +61,12 @@ const App = () => {
      }}>
       <main style={{filter: isActiveAlert.condition ? 'blur(1px)' : 'none'}}>
         <div className={styles.header}>
-          <div className={styles.header__text}>
+          <div>
             <h1>Список пользователей</h1>
           </div>
         </div>
-          <Input isUser={data}/>
-          <Table/>
+          <Input isUser={isUser}/>
+          <Table isLoading={isLoading}/>
           <div className={styles.pagination}>
             {[...Array(counter)].map((value, index)=>{
               index+=1
@@ -82,4 +84,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default App

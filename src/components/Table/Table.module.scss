@@ -4,14 +4,22 @@
     height: 14px;
     padding: 0% 2.7%;
     margin-top: 85px;
-
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     font-size: 10px;
     line-height: 140%;
-
     color: #9EAAB4;
+    @media screen and (min-width:1024px) {
+        height: 14px;
+        margin-top: 85px;
+        font-size: 10px;
+    }
+    @media screen and (min-width:1400px){
+        height: 16px;
+        margin-top: 100px;
+        font-size: 12px;
+    }
     &__button{
         background-color: transparent;
         border: none;
@@ -25,9 +33,13 @@
         border-bottom: 1px dashed #9EAAB4;
         padding: 0;
         margin-left: 9px;
-        &:hover{
-            color: #333333;
-            border-bottom: 1px dashed #333333;
+        @media screen and (min-width:1024px) {
+            font-size: 10px;
+            line-height: 14px;
+        }
+        @media screen and (min-width:1400px){
+            font-size: 12px;
+            line-height: 16px;
         }
         &_active{
             background-color: transparent;
@@ -42,6 +54,14 @@
             border-bottom: 1px dashed #333333;
             padding: 0;
             margin-left: 9px;
+            @media screen and (min-width:1024px) {
+                font-size: 10px;
+                line-height: 14px;
+            }
+            @media screen and (min-width:1400px){
+                font-size: 12px;
+                line-height: 16px;
+            }
         }
     }
     &__table{
@@ -52,6 +72,14 @@
         margin: 0% 2.7%;
         margin-top: 18px;
         background-color: #FFFFFF;
+        @media screen and (min-width:1024px) {
+            padding: 16px 16px;
+            margin-top: 18px;
+        }
+        @media screen and (min-width:1400px){
+            padding: 18px 18px;
+            margin-top: 20px;
+        }
     }
     &__row{
         position: relative;
@@ -70,6 +98,14 @@
             font-size: 12px;
             line-height: 16px;
             color: #0CB4F1;
+            @media screen and (min-width:1024px) {
+                font-size: 12px;
+                line-height: 16px;
+            }
+            @media screen and (min-width:1400px){
+                font-size: 14px;
+                line-height: 20px;
+            }
         }
         &_text{
             font-family: 'Inter';
@@ -78,6 +114,14 @@
             font-size: 12px;
             line-height: 17px;
             color: #9EAAB4;
+            @media screen and (min-width:1024px) {
+                font-size: 12px;
+                line-height: 17px;
+            }
+            @media screen and (min-width:1400px){
+                font-size: 14px;
+                line-height: 20px;
+            }
         }
         &_example{
             font-family: 'Inter';
@@ -86,6 +130,14 @@
             font-size: 10px;
             line-height: 17px;
             color: #9EAAB4;
+            @media screen and (min-width:1024px) {
+                font-size: 10px;
+                line-height: 14px;
+            }
+            @media screen and (min-width:1400px){
+                font-size: 12px;
+                line-height: 17px;
+            }
         }
         &_icon{
             position: absolute;

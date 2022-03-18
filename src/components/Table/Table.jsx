@@ -1,9 +1,12 @@
 import React, {useContext, useCallback, useState, useEffect} from "react";
+
 import { ContextApp } from "../Reducers/CleanReducer";
+import Loader from "../Loader/Loader";
+
 import styles from './Table.module.scss'
 import CancelIcon from './icon/cancel.svg'
 
-const Table = () =>{
+const Table = (props) =>{
     const { setIsClean, isResult, setIsResult,isRating,
             isDataRegistrate, setIsDataRegistrate, setIsRating,
             setIsActiveAlert, setDeleteId, isStart, isEnd} = useContext(ContextApp)
@@ -87,6 +90,7 @@ const Table = () =>{
                         }}
                         >Рейтинг</button>
             </div>
+            {props.isLoading ? <Loader/> :
             <div className={styles.sort__table}>
                 <div className={styles.sort__row}>
                     <div className={styles.sort__row_box}>
@@ -125,6 +129,7 @@ const Table = () =>{
                     })
                 }
             </div>
+            }
         </>
     )
 }
