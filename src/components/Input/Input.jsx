@@ -35,8 +35,8 @@ const Input = (props)=>{
         setIsPage({type:'setPage', page:1})
         setIsDataRegistrate({type: 'off'})
         setIsText('')
-        setIsResult({type:'setResult',array:props.isUser})
-    },[setIsClean,setIsResult,props.isUser,setIsDataRegistrate,setIsRating, setIsPage])
+        
+    },[setIsClean,setIsDataRegistrate,setIsRating, setIsPage])
 
     const handlerKeyPress = useCallback((target)=>{
         if (target.charCode === 13){

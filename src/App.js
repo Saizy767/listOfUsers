@@ -59,7 +59,8 @@ const App = () => {
       isEnd, setIsEnd,
       isPage, setIsPage,
      }}>
-      <main style={{filter: isActiveAlert.condition ? 'blur(1px)' : 'none'}}>
+      <main style={{filter: isActiveAlert.condition ? 'blur(1px)' : 'none',
+                    overflow: window.innerWidth<600? 'hidden' : 'none'}}>
         <div className={styles.header}>
           <div>
             <h1>Список пользователей</h1>
